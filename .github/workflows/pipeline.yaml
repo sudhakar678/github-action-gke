@@ -7,9 +7,9 @@ on:
 
 env:
   PROJECT_ID: ${{secrets.GKE_PROJECT}}
-  GKE_CLUSTER: sudhakar-test
+  GKE_CLUSTER: sudhakar-test-ak
   GKE_ZONE: us-central1-c
-  DEPLOYMENT_NAME: github-action
+  DEPLOYMENT_NAME: github-action-runner
   IMAGE: github-actions-gke-image
   TAG: 1.0.1
 
@@ -47,7 +47,7 @@ jobs:
 
       - name: Get GKE Credentials
         run: |-
-          gcloud container clusters get-credentials sudhakar-test --zone us-central1-c
+          gcloud container clusters get-credentials sudhakar-test-ak --zone us-central1-c
 
       - name: Build Docker Image
         run: |-
