@@ -12,7 +12,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: gcr.io/cloudside-academy/github-action-test:4e30bff
+      - image: gcr.io/cloudside-academy/github-action-test:8e70cde
         name: nginx
         ports:
         - containerPort: 80
