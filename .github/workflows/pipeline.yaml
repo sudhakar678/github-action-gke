@@ -49,7 +49,7 @@ jobs:
         run: |-
           ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$TAG
           ./kustomize build . | kubectl apply -f -
-          kubectl rollout status deployment/nginx
+          kubectl rollout status deployment/nginx-svc
 
       
       
